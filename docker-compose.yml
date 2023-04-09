@@ -4,24 +4,9 @@ services:
   image: kohlihub/maven-web-app26:VERSION
   ports:
    - 8081:8080
-  environment:
-   - MONGO_DB_HOSTNAME=mongo
-   - MONGO_DB_USERNAME=bhaskar
-   - MONGO_DB_PASSWORD=bhaskar@123
   networks:
    - mavenwebbridge
-  mongo:
-    image: mongo
-    environment:
-    - MONGO_INITDB_ROOT_USERNAME=bhaskar
-    - MONGO_INITDB_ROOT_PASSWORD=bhaskar@123
-    networks:
-    - mavenwebbridge
-    volumes:
-    - mavenwebvol:/data/db
 networks:
    mavenwebbridge:
       driver: bridge
-volumes:
-     mavenwebvol:
-       driver: local
+
