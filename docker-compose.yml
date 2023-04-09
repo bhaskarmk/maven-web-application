@@ -1,7 +1,7 @@
 version: "2.1"
 services:
   mavenwebapplication:
-  image: kohlihub/maven-web-application:VERSION
+  image: kohlihub/maven-web-app:VERSION
   ports:
    - 8080:8080
   networks:
